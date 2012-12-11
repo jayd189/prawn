@@ -190,7 +190,9 @@ module Prawn
     end
 
     def next_image_id
-      @image_counter = Time.now.to_i 
+      @image_counter = Time.now.to_f
+      @image_counter *= 100
+      @image_counter = @image_counter.to_i
     end
   end
 end
